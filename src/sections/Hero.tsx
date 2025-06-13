@@ -1,3 +1,5 @@
+"use client";
+
 import memojiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -7,9 +9,14 @@ import SparkleIcon from "@/assets/icons/sparkle.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 
 export const HeroSection = () => {
+  const handleClick = () => {
+    window.open(
+      "https://www.linkedin.com/in/adrian-prisacaru-a9a45815b/",
+      "_blank"
+    );
+  };
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
-      {/* Background Hero section */}
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -99,7 +106,6 @@ export const HeroSection = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      {/* Background Hero section */}
       <div className="container">
         <div className="flex flex-col items-center">
           <Image
@@ -131,7 +137,10 @@ export const HeroSection = () => {
             <span className="font font-semibold">Explore My work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl">
+          <button
+            className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl z-10"
+            onClick={handleClick}
+          >
             <span>👋</span>
             <span className="font-semibold">Let's Connect</span>
           </button>
