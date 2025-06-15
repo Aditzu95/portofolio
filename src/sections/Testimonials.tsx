@@ -43,7 +43,7 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="Team Feedback"
@@ -52,7 +52,7 @@ export const TestimonialsSection = () => {
         work"
         />
         <div className="mt-16 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className="flex gap-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
+          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:60s] hover:[animation-play-state:paused]">
             {[...new Array(2)].fill(0).map((_, index) => (
               <Fragment key={index}>
                 {testimonials.map((testimonial) => (
@@ -85,6 +85,6 @@ export const TestimonialsSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
