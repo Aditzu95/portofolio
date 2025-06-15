@@ -7,7 +7,11 @@ import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
+import NextJsIcon from "@/assets/icons/next-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
+import MaterialUiIcon from "@/assets/icons/material-ui.svg";
+import TypescriptIcon from "@/assets/icons/typescript.svg";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -18,14 +22,14 @@ import { useRef } from "react";
 
 const toolBoxItems = [
   { title: "Javascript", iconType: JavascriptIcon },
-  { title: "NextJs", iconType: CssIcon },
+  { title: "NextJs", iconType: NextJsIcon },
   { title: "HTML5", iconType: HTMLIcon },
   { title: "React", iconType: ReactIcon },
   { title: "Github", iconType: GithubIcon },
-  { title: "Typescript", iconType: CssIcon },
-  { title: "Jest", iconType: CssIcon },
-  { title: "MaterialUI", iconType: CssIcon },
-  { title: "Tailwind", iconType: CssIcon },
+  { title: "Typescript", iconType: TypescriptIcon },
+  { title: "CSS", iconType: CssIcon },
+  { title: "MaterialUI", iconType: MaterialUiIcon },
+  { title: "Tailwind", iconType: TailwindIcon },
 ];
 
 const hobbies = [
@@ -43,7 +47,7 @@ export const AboutSection = () => {
   const constrainRef = useRef(null);
 
   return (
-    <div className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About me"
@@ -54,8 +58,8 @@ export const AboutSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
-                title="My Reads"
-                description="Explore the books shaping my perspectives"
+                title="Today’s Pick"
+                description="A good read, thought I’d share it with people."
               />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="Book cover" />
@@ -106,9 +110,9 @@ export const AboutSection = () => {
               <Image
                 src={mapImage}
                 alt="map"
-                className="h-full w-full object-cover object-left-top"
+                className="h-full w-full object-cover"
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-2/3 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration-2s] " />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10" />
                 <Image
@@ -121,6 +125,6 @@ export const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
